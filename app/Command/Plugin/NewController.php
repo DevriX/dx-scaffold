@@ -99,7 +99,7 @@ class NewController extends CommandController
 
 		$printer->newline();
 		$printer->display( 'Creating plugin...' );
-		exec( 'git clone https://github.com/DevriX/dx-plugin-boilerplate ' . $this->plugin_slug . ' && cd ' . $this->plugin_slug . ' && rm -rf .git', $output, $return_var );
+		exec( 'git clone git@github.com:DevriX/dx-plugin-boilerplate.git ' . $this->plugin_slug . ' && cd ' . $this->plugin_slug . ' && rm -rf .git', $output, $return_var );
 
 		if ( $return_var !== 0 ) {
 			$printer->newline();
